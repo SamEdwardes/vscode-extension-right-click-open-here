@@ -4,9 +4,11 @@ Open VS Code from the context menu.
 
 ## Features
 
-Open or reopen VS Code in specific directories using the context menu in the explorer.
+Adds custom commands to the explorer context menu and command palette to open/reopen VS Code in specific directories.
 
-![Screenshot of context menu](images/screenshot-context-menu.png)
+![Screenshot of context menu](https://github.com/SamEdwardes/vscode-extension-right-click-open-here/blob/main/images/screenshot-context-menu.png?raw=true)
+
+![Screenshot of command palette](https://github.com/SamEdwardes/vscode-extension-right-click-open-here/blob/main/images/screenshot-context-menu.png?raw=true)
 
 The follow commands are added to the explorer context menu:
 
@@ -19,6 +21,12 @@ Two commands are also added to the Command Palette:
 
 - `> Open Here: Open Workspace Parent Folder New Window`
 - `> Open Here: Open Workspace Parent Folder Same Window`
+
+## Links
+
+- GitHub Repo: <https://github.com/SamEdwardes/vscode-extension-right-click-open-here>
+- VS Code Marketplace: <https://marketplace.visualstudio.com/items?itemName=SamEdwardes.right-click-open-here>
+- Open VSX Marketplace: <https://open-vsx.org/extension/SamEdwardes/right-click-open-here>
 
 ## Requirements
 
@@ -38,26 +46,8 @@ See <https://github.com/SamEdwardes/vscode-extension-right-click-open-here/blob/
 
 ## Contributing
 
-Clone the repo:
+See <https://github.com/SamEdwardes/vscode-extension-right-click-open-here/blob/main/CONTRIBUTING.md>.
 
-```bash
-git clone https://github.com/SamEdwardes/vscode-extension-right-click-open-here.git
-```
+## Attributions
 
-Install the dependencies:
-
-```bash
-npm install
-```
-
-Lint:
-
-```bash
-npm run lint
-```
-
-Build the package:
-
-```bash
-vsce package
-```
+- Motivated by this great extension: <https://github.com/chrisdias/vscode-opennewinstance>

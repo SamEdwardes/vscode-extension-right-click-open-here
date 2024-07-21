@@ -1,3 +1,5 @@
+images/**
+
 .vscode/**
 .vscode-test/**
 out/**
