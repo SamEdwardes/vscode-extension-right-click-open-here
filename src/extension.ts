@@ -16,10 +16,10 @@ async function openParentFolder(uri: vscode.Uri, forceNewWindow: boolean = false
 
 async function openWorkspaceParentFolder(forceNewWindow: boolean = false) {
 	// Check that worspaceFolders is not undefined
-	if (!vscode.workspace.workspaceFolders) { return }
+	if (!vscode.workspace.workspaceFolders) { return; }
 
-	const workspaceRoot = vscode.workspace.workspaceFolders[0].uri.path
-	const parentPath = workspaceRoot.split('/').slice(0, -2).join('/')
+	const workspaceRoot = vscode.workspace.workspaceFolders[0].uri.path;
+	const parentPath = workspaceRoot.split('/').slice(0, -1).join('/');
 
 	vscode.commands.executeCommand(
 		'vscode.openFolder',
