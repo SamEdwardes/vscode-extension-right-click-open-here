@@ -2,22 +2,87 @@
   "name": "right-click-open-here",
   "displayName": "Right Click Open Here",
   "description": "Open or re-open VS Code from the explorer context menu.",
-  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamEdwardes/vscode-extension-right-click-open-here"
+  },
+  "publisher": "SamEdwardes",
+  "author": {
+    "name": "Sam Edwardes"
+  },
+  "version": "0.0.0",
   "engines": {
     "vscode": "^1.91.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "right-click-open-here.helloWorld",
-        "title": "Hello World"
+        "command": "right-click-open-here.openNewWindowHere",
+        "title": "Open Here: New Window"
+      },
+      {
+        "command": "right-click-open-here.reopenWindowHere",
+        "title": "Open Here: Same Window"
+      },
+      {
+        "command": "right-click-open-here.openParentFolderNewWindowHere",
+        "title": "Open Here: Parent Folder New Window"
+      },
+      {
+        "command": "right-click-open-here.openParentFolderSameWindowHere",
+        "title": "Open Here: Parent Folder Same Window"
+      },
+      {
+        "command": "right-click-open-here.openWorkspaceParentFolderNewWindowHere",
+        "title": "Open Here: Open Workspace Parent Folder New Window"
+      },
+      {
+        "command": "right-click-open-here.openWorkspaceParentFolderSameWindowHere",
+        "title": "Open Here: Open Workspace Parent Folder Same Window"
       }
-    ]
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "right-click-open-here.openNewWindowHere",
+          "group": "1_openHere@996"
+        },
+        {
+          "command": "right-click-open-here.reopenWindowHere",
+          "group": "1_openHere@997"
+        },
+        {
+          "command": "right-click-open-here.openParentFolderNewWindowHere",
+          "group": "1_openHere@998"
+        },
+        {
+          "command": "right-click-open-here.openParentFolderSameWindowHere",
+          "group": "1_openHere@999"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "right-click-open-here.openNewWindowHere",
+          "when": "false"
+        },
+        {
+          "command": "right-click-open-here.reopenWindowHere",
+          "when": "false"
+        },
+        {
+          "command": "right-click-open-here.openParentFolderNewWindowHere",
+          "when": "false"
+        },
+        {
+          "command": "right-click-open-here.openParentFolderSameWindowHere",
+          "when": "false"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
@@ -34,16 +99,17 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.91.0",
     "@types/mocha": "^10.0.7",
     "@types/node": "20.x",
+    "@types/vscode": "^1.91.0",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.11.0",
-    "eslint": "^8.57.0",
-    "esbuild": "^0.21.5",
-    "npm-run-all": "^4.1.5",
-    "typescript": "^5.4.5",
     "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.4.0"
+    "@vscode/test-electron": "^2.4.0",
+    "@vscode/vsce": "^2.31.1",
+    "esbuild": "^0.21.5",
+    "eslint": "^8.57.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.4.5"
   }
 }
