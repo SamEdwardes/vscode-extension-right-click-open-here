@@ -1,26 +1,105 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
-export function activate(context: vscode.ExtensionContext) {
+// ------------------------------------------------------------------------------
+// Define helper functions
+// ------------------------------------------------------------------------------
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "right-click-open-here" is now active!');
-
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('right-click-open-here.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Right Click Open Here!');
-	});
-
-	context.subscriptions.push(disposable);
+async function openParentFolder(uri: vscode.Uri, forceNewWindow: boolean = false) {
+	const parentPath = uri.path.split('/').slice(0, -1).join('/');
+	vscode.commands.executeCommand(
+		'vscode.openFolder',
+		vscode.Uri.parse(parentPath),
+		{ forceNewWindow: forceNewWindow }
+	);
 }
 
-// This method is called when your extension is deactivated
-export function deactivate() {}
+
+async function openWorkspaceParentFolder(forceNewWindow: boolean = false) {
+	// Check that worspaceFolders is not undefined
+	if (!vscode.workspace.workspaceFolders) { return }
+
+	const workspaceRoot = vscode.workspace.workspaceFolders[0].uri.path
+	const parentPath = workspaceRoot.split('/').slice(0, -2).join('/')
+
+	vscode.commands.executeCommand(
+		'vscode.openFolder',
+		vscode.Uri.parse(parentPath),
+		{ forceNewWindow: forceNewWindow }
+	);
+}
+
+// ------------------------------------------------------------------------------
+// Define commands
+// ------------------------------------------------------------------------------
+
+export function activate(context: vscode.ExtensionContext) {
+
+	// ---------------------------------------------------------------------------
+	// Open folder commands
+	// ---------------------------------------------------------------------------
+
+	const openNewWindowHere = vscode.commands.registerCommand(
+		'right-click-open-here.openNewWindowHere',
+		(uri: vscode.Uri) => {
+			vscode.commands.executeCommand('vscode.openFolder', uri, { forceNewWindow: true });
+		}
+	);
+
+	context.subscriptions.push(openNewWindowHere);
+
+	const reopenWindowHere = vscode.commands.registerCommand(
+		'right-click-open-here.reopenWindowHere',
+		(uri: vscode.Uri) => {
+			vscode.commands.executeCommand('vscode.openFolder', uri, { forceNewWindow: false });
+		}
+	);
+
+	context.subscriptions.push(reopenWindowHere);
+
+	// ---------------------------------------------------------------------------
+	// Open parent folder commands
+	// ---------------------------------------------------------------------------
+
+	const openParentFolderNewWindowHere = vscode.commands.registerCommand(
+		'right-click-open-here.openParentFolderNewWindowHere',
+		(uri: vscode.Uri) => {
+			openParentFolder(uri, true);
+		}
+	);
+
+	context.subscriptions.push(openParentFolderNewWindowHere);
+
+	const openParentFolderSameWindowHere = vscode.commands.registerCommand(
+		'right-click-open-here.openParentFolderSameWindowHere',
+		(uri: vscode.Uri) => {
+			openParentFolder(uri, false);
+		}
+	);
+
+	context.subscriptions.push(openParentFolderSameWindowHere);
+
+	// ---------------------------------------------------------------------------
+	// Open workspace parent folder commands
+	// ---------------------------------------------------------------------------
+
+	const openWorkspaceParentFolderNewWindowHere = vscode.commands.registerCommand(
+		'right-click-open-here.openWorkspaceParentFolderNewWindowHere',
+		async function () {
+			await openWorkspaceParentFolder(true);
+		}
+	);
+
+	context.subscriptions.push(openWorkspaceParentFolderNewWindowHere);
+
+	const openWorkspaceParentFolderSameWindowHere = vscode.commands.registerCommand(
+		'right-click-open-here.openWorkspaceParentFolderSameWindowHere',
+		async function () {
+			await openWorkspaceParentFolder(false);
+		}
+	);
+
+	context.subscriptions.push(openWorkspaceParentFolderSameWindowHere);
+
+}
+
+export function deactivate() { }
