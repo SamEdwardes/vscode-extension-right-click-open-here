@@ -46,32 +46,8 @@ See <https://github.com/SamEdwardes/vscode-extension-right-click-open-here/blob/
 
 ## Contributing
 
-Clone the repo:
+See <https://github.com/SamEdwardes/vscode-extension-right-click-open-here/blob/main/CONTRIBUTING.md>.
 
-```bash
-git clone https://github.com/SamEdwardes/vscode-extension-right-click-open-here.git
-```
+## Attributions
 
-Install the dependencies:
-
-```bash
-npm install
-```
-
-Lint:
-
-```bash
-npm run lint
-```
-
-Build the package:
-
-```bash
-vsce package
-```
-
-Publish the package:
-
-```bash
-vsce publish
-```
+- Motivated by this great extension: <https://github.com/chrisdias/vscode-opennewinstance>
