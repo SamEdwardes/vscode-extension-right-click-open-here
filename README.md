@@ -6,7 +6,7 @@ Open VS Code from the context menu.
 
 Open or reopen VS Code in specific directories using the context menu in the explorer.
 
-![Screenshot of context menu](images/screenshot-context-menu.png)
+![Screenshot of context menu](https://github.com/SamEdwardes/vscode-extension-right-click-open-here/blob/main/images/screenshot-context-menu.png?raw=true)
 
 The follow commands are added to the explorer context menu:
 
