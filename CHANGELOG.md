@@ -2,7 +2,9 @@
 
 ## [Unreleased]
 
-Nothing yet.
+Minor updates after several days of real world usage.
+
+- Fix image links in the README.
 
 ## 0.0.2 (pre-release) (2024-07-21)
 
