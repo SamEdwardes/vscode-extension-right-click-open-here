@@ -2,9 +2,12 @@
 
 ## [Unreleased]
 
-Minor updates after several days of real world usage.
+No changes yet.
+
+## O.0.3 (pre-release) (2024-08-02)
 
 - Fix image links in the README.
+- Add support for older versions of VS Code (1.87.0). Closes #3.
 
 ## 0.0.2 (pre-release) (2024-07-21)
 

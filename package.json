@@ -10,9 +10,9 @@
   "author": {
     "name": "Sam Edwardes"
   },
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
-    "vscode": "^1.89.0"
+    "vscode": "^1.87.0"
   },
   "categories": [
     "Other"
@@ -101,7 +101,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.7",
     "@types/node": "20.x",
-    "@types/vscode": "^1.89.0",
+    "@types/vscode": "^1.87.0",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.11.0",
     "@vscode/test-cli": "^0.0.9",
