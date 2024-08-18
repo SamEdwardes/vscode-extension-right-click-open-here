@@ -51,3 +51,4 @@ See <https://github.com/SamEdwardes/vscode-extension-right-click-open-here/blob/
 ## Attributions
 
 - Motivated by this great extension: <https://github.com/chrisdias/vscode-opennewinstance>
+- [Open folder icons created by kmg design - Flaticon](https://www.flaticon.com/free-icons/open-folder)

@@ -1,4 +1,9 @@
 images/**
+icon/raw.png
+icon/512-blue-rounded.png
+icon/512-blue-square.png
+justfile
+.mise.toml
 
 .vscode/**
 .vscode-test/**

@@ -4,6 +4,11 @@
 
 No changes yet.
 
+## O.0.4 (2024-08-18)
+
+- Added an icon.
+- Remove pre-release tag.
+
 ## O.0.3 (pre-release) (2024-08-02)
 
 - Fix image links in the README.

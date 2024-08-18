@@ -1,6 +1,7 @@
 {
   "name": "right-click-open-here",
   "displayName": "Right Click Open Here",
+  "icon": "icon/128-blue-rounded.png",
   "description": "Open or re-open VS Code from the explorer context menu.",
   "repository": {
     "type": "git",
@@ -10,7 +11,7 @@
   "author": {
     "name": "Sam Edwardes"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.87.0"
   },
