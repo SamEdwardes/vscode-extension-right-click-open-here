@@ -30,12 +30,6 @@ Build the package:
 vsce package
 ```
 
-Publish the package:
-
-```bash
-vsce publish
-```
-
 ## Semantic Versioning
 
 <https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions>

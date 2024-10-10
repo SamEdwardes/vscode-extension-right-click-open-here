@@ -2,7 +2,11 @@
 
 ## [Unreleased]
 
-No changes yet.
+- No changes.
+
+## 0.0.5 (2024-10-10)
+
+- Added settings to configure when commands to show in the context menu. This allows you to hide commands that you don't use from the context menu. Closes #5.
 
 ## O.0.4 (2024-08-18)
 
