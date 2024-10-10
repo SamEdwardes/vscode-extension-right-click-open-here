@@ -34,7 +34,14 @@ None
 
 ## Extension Settings
 
-None
+```json
+{
+    "right-click-open-here.contextMenu.openFolder.showNewWindow": true,
+    "right-click-open-here.contextMenu.openFolder.showSameWindow": true,
+    "right-click-open-here.contextMenu.parentFolder.showParentFolderNewWindow": true,
+    "right-click-open-here.contextMenu.parentFolder.showParentFolderSameWindow": true
+}
+```
 
 ## Known Issues
 
