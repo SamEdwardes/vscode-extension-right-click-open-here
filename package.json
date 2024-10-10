@@ -11,7 +11,7 @@
   "author": {
     "name": "Sam Edwardes"
   },
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.87.0"
   },
@@ -20,6 +20,35 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Right Click Open Here",
+      "properties": {
+        "right-click-open-here.contextMenu.openFolder.showNewWindow": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show 'Open Here: New Window' in the context menu.",
+          "order": 1
+        },
+        "right-click-open-here.contextMenu.openFolder.showSameWindow": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show 'Open Here: Same Window' in the context menu.",
+          "order": 2
+        },
+        "right-click-open-here.contextMenu.parentFolder.showParentFolderNewWindow": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show 'Open Here: Parent Folder New Window' in the context menu.",
+          "order": 3
+        },
+        "right-click-open-here.contextMenu.parentFolder.showParentFolderSameWindow": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show 'Open Here: Parent Folder Same Window' in the context menu.",
+          "order": 4
+        }
+      }
+    },
     "commands": [
       {
         "command": "right-click-open-here.openNewWindowHere",
@@ -50,19 +79,23 @@
       "explorer/context": [
         {
           "command": "right-click-open-here.openNewWindowHere",
-          "group": "1_openHere@996"
+          "group": "1_openHere@996",
+          "when": "config.right-click-open-here.contextMenu.openFolder.showNewWindow"
         },
         {
           "command": "right-click-open-here.reopenWindowHere",
-          "group": "1_openHere@997"
+          "group": "1_openHere@997",
+          "when": "config.right-click-open-here.contextMenu.openFolder.showSameWindow"
         },
         {
           "command": "right-click-open-here.openParentFolderNewWindowHere",
-          "group": "1_openHere@998"
+          "group": "1_openHere@998",
+          "when": "config.right-click-open-here.contextMenu.parentFolder.showParentFolderNewWindow"
         },
         {
           "command": "right-click-open-here.openParentFolderSameWindowHere",
-          "group": "1_openHere@999"
+          "group": "1_openHere@999",
+          "when": "config.right-click-open-here.contextMenu.parentFolder.showParentFolderSameWindow"
         }
       ],
       "commandPalette": [
