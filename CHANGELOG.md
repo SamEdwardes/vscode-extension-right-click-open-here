@@ -6,7 +6,7 @@
 
 ## 0.0.6 (2025-08-07)
 
-- Disable `Open Here: Parent Folder New Window` and `Open Here: Parent Folder Same Window` from the context menu by default. Closes #6. These commands were typically not useful to see in the context menu. To open the parent folder, you can use the command palette commands instead: `> Open Here: Open Workspace Parent Folder New Window` or `> Open Here: Open Workspace Parent Folder Same Window`
+- Disable `Open Here: Parent Folder New Window` and `Open Here: Parent Folder Same Window` from the context menu by default. Closes #7. These commands were typically not useful to see in the context menu. To open the parent folder, you can use the command palette commands instead: `> Open Here: Open Workspace Parent Folder New Window` or `> Open Here: Open Workspace Parent Folder Same Window`
 
 ```json
 {
