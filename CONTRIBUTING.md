@@ -16,6 +16,16 @@ Install the dependencies:
 npm install
 ```
 
+Set up pre-commit hooks:
+
+```bash
+# Install pre-commit with `uv`
+uv tool install pre-commit
+
+# Set up pre-commit
+pre-commit install
+```
+
 Open the debugger, and click the `Run Extension` button. Verify that the extension works.
 
 Lint:
