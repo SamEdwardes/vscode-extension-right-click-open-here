@@ -20,8 +20,8 @@ The follow commands are added to the explorer context menu:
 
 - `Open Here: New Window`
 - `Open Here: Same Window`
-- `Open Here: Parent Folder New Window`
-- `Open Here: Parent Folder Same Window`
+- `Open Here: Parent Folder New Window` (disabled by default)
+- `Open Here: Parent Folder Same Window` (disabled by default)
 
 Two commands are also added to the Command Palette:
 
@@ -38,8 +38,8 @@ None
 {
     "right-click-open-here.contextMenu.openFolder.showNewWindow": true,
     "right-click-open-here.contextMenu.openFolder.showSameWindow": true,
-    "right-click-open-here.contextMenu.parentFolder.showParentFolderNewWindow": true,
-    "right-click-open-here.contextMenu.parentFolder.showParentFolderSameWindow": true
+    "right-click-open-here.contextMenu.parentFolder.showParentFolderNewWindow": false,
+    "right-click-open-here.contextMenu.parentFolder.showParentFolderSameWindow": false
 }
 ```
 
