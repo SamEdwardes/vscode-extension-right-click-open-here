@@ -11,7 +11,7 @@
   "author": {
     "name": "Sam Edwardes"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.87.0"
   },
@@ -37,13 +37,13 @@
         },
         "right-click-open-here.contextMenu.parentFolder.showParentFolderNewWindow": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Show 'Open Here: Parent Folder New Window' in the context menu.",
           "order": 3
         },
         "right-click-open-here.contextMenu.parentFolder.showParentFolderSameWindow": {
           "type": "boolean",
-          "default": true,
+          "default": false,
           "description": "Show 'Open Here: Parent Folder Same Window' in the context menu.",
           "order": 4
         }
